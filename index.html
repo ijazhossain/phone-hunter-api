@@ -13,8 +13,47 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
-<body>
+<body class="container bg-warning-subtle">
+    <header>
+        <h1 class="text-success text-center pt-5 pb-4 fw-bold">Search your phone</h1>
+        <div class="input-group mb-3 w-75 mx-auto">
+            <input id="search-field" type="text" class="form-control py-3" placeholder="Search your phone"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button onclick="handelSearch(10)" id="search-btn" class="btn btn-success fw-semibold"
+                type="button">Search</button>
+        </div>
+        <h1 id="warn-msg" class="text-warning d-none text-center font-semibold my-5">No Phone Found, Please Search
+            Another Phone</h1>
+    </header>
+    <main>
+        <!-- spinner -->
+        <div id="spinner-container" class="d-flex justify-content-center d-none">
+            <div class="spinner-border my-5 " role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <!-- phone-container -->
+        <div id="phone-container"
+            class="w-50 mx-auto d-flex flex-column justify-content-center align-items-center bg-secondary-subtle my-5 py-4 rounded-3 d-none">
 
+        </div>
+        <div id="phones-container" class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- <div class="col">
+                <div class="card h-100">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div> -->
+
+        </div>
+
+        <button id="show-all-btn" class="btn btn-lg btn-danger my-5 d-block mx-auto">See All
+            Phones</button>
+    </main>
     <!-- JS script -->
     <script src='js/index.js'></script>
     <!-- bootstrap js -->
